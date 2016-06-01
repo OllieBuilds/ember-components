@@ -1,6 +1,6 @@
-<h3>{{list.title}}</h3>
-{{#each list.items as |item|}}
-  <ul>
-    <li>{{item.content}}</li>
-  </ul>
-{{/each}}
+<h3 {{action 'toggleListDetail'}}>{{list.title}}</h3>
+<ul>
+  {{#each list.items as |item|}}
+      {{listr-list/item item = item}}
+  {{/each}}
+</ul>
